@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --redcolor: #fb5849;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* start Navbar */
+.navbar .navbar-nav .nav-link {
+    padding: 0 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.active {
+    color: var(--redcolor) !important;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--redcolor) !important;
+}
+
+.navbar .dropdown-menu :not(:last-child) {
+    border-bottom: 2px solid #ddd;
+}
+
+.navbar .dropdown-menu {
+    overflow: hidden;
+}
+
+.navbar .dropdown-item:hover {
+    margin-left: 10px;
+
+}
+
+/* end Navbar */
+/* start landing */
+.landing {
+    height: calc(100vh - 97px);
+}
+
+.landing .left-bg {
+    flex-basis: 35%;
+    background-image: url(../images/top-left-bg.jpg);
+    background-size: cover;
+}
+
+.landing .right-bg {
+    flex-basis: 65%;
+    background-image: url(../images/slide-01.jpg);
+    background-size: cover;
+
+}
+
+@media(max-width:991px) {
+    .landing {
+        flex-direction: column;
+    }
+}
+
+.landing h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    position: absolute;
+    position: relative;
+}
+
+.landing .btn {
+    color: var(--redcolor);
+    background-color: white;
+    font-size: 1.3rem;
+}
+
+/* end landing */
+/* start about */
+.title {
+    color: var(--redcolor);
+}
+
+.title span {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background-color: var(--redcolor);
+    margin-right: 10px;
+    position: absolute;
+}
+
+.youtube {
+    background-image: url(../images/about-video-bg.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.youtube span {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--redcolor);
+    transition: .3s;
+}
+
+.youtube span:hover {
+    background-color: #fb5849b1;
+}
+
+
+
+/* end about */
+/* start menu */
+.menu {
+    padding-top: 5rem;
+    background-color: #ddd;
+}
+
+.menu .row .image::before {
+    content: attr(data-price);
+    position: absolute;
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: var(--redcolor);
+    color: white;
+    font-size: 2rem;
+}
+
+.menu .image {
+    overflow: hidden;
+
+}
+
+.menu .image .text {
+    padding: 10px;
+    width: 100%;
+    height: 60%;
+    bottom: -58%;
+    background-color: var(--redcolor);
+    color: white;
+    transition: .5s;
+}
+
+.menu .image:hover .text {
+    bottom: 0;
+}
+
+
+/* end menu */
+/* start chefs */
+.chefs>p {
+    color: var(--redcolor);
+}
+
+.chefs .card:hover {
+    border-color: var(--redcolor);
+}
+
+.chefs .card:hover h4 {
+
+    color: var(--redcolor);
+}
+
+.chefs .card:hover .img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.chefs .card .icons {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.chefs .card:hover .icon {
+    color: var(--redcolor);
+}
+
+.chefs .card:hover .icons {
+    display: block;
+}
+
+/* end chefs */
+/* start contact */
+.contact {
+    background-image: url(../images/reservation-bg.jpg);
+    background-size: cover;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fb5849;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+}
+
+.contact .bottom-section {
+    margin-top: 5rem;
+}
+
+
+.contact .phone {
+    padding-top: 5rem;
+
+}
+
+.contact .email {
+    padding-top: 5rem;
+}
+
+
+.massage {
+    height: 50px;
+}
+
+.contact button {
+    background-color: var(--redcolor);
+    color: white;
+}
+
+/* end contact */
+/* start prices */
+.price {
+    background-color: var(--redcolor);
+    padding: 2rem .5rem;
+}
+
+/* end prices */
+/* start footer */
+.footer {
+    background-color: var(--redcolor);
+}
+
+.footer span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--redcolor);
+}
+
+@media (max-width:991px) {
+    .footer .container {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer .icon {
+        margin: auto;
+    }
+
+    .footer img {
+        margin: 2rem auto;
+    }
+
+}
+
+/* end footer */
